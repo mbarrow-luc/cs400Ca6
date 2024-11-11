@@ -1,7 +1,7 @@
 
-/******************************************************************
+/*
  *
- *   YOUR NAME / SECTION NUMBER
+ *   Michael Barrow / COMP 400C-001
  *
  *   Note, additional comments provided throughout this source code
  *   is for educational purposes
@@ -11,7 +11,7 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 
-/**
+/*
  * Class PriorityQueue<E,P>
  *
  * The class implements a priority queue utilizing a min heap. The underlying 
@@ -111,7 +111,7 @@ class PriorityQueue<E, P> {
     public Node offer(E e, P p)     { return add(e, p); }
 
 
-    /**
+    /*
      * Public Method peek()
      *
      * Retrieves, but does not remove, the head of this queue, or returns null 
@@ -129,7 +129,7 @@ class PriorityQueue<E, P> {
     }
 
 
-    /**
+    /*
      * Public Method add(E,P)
      *
      * Inserts the specified element into min heap as the right most leaf on the
@@ -151,12 +151,12 @@ class PriorityQueue<E, P> {
 
     public Node add(E e, P priority) {
 
-        // YOUR CODE GOES HERE
+        // TODO YOUR CODE GOES HERE
         return null;
     }
 
 
-    /**
+    /*
      * Public Method contains(E)
      *
      * Returns true if this queue contains the specified element. More formally,
@@ -168,12 +168,12 @@ class PriorityQueue<E, P> {
 
     public boolean contains(E e) {
 
-        // ADD YOUR CODE HERE
+        // TODO ADD YOUR CODE HERE
         return false;
     }
 
 
-    /**
+    /*
      * Public Method remove()
      *
      * Retrieves and removes the head of this queue. This method differs from 
@@ -192,7 +192,7 @@ class PriorityQueue<E, P> {
     }
 
 
-    /**
+    /*
      * Public Method poll()
      *
      * Retrieves and removes the head of this queue, or returns null if this 
@@ -234,7 +234,7 @@ class PriorityQueue<E, P> {
     }
 
 
-    /**
+    /*
      * Private Method pushDown(int)
      *
      * This method is called when dequeuing an element from the queue. The shape 
@@ -262,7 +262,7 @@ class PriorityQueue<E, P> {
     }
 
 
-    /**
+    /*
      * Private Method pullUp(int)
      *
      * This method is called when enqueuing an element on the queue. The shape of 
@@ -299,7 +299,7 @@ class PriorityQueue<E, P> {
     }
 
 
-    /**
+    /*
      * Public Method toArray()
      *
      * This method returns an ArrayList of type 'E', which is the nodes element 
@@ -320,7 +320,7 @@ class PriorityQueue<E, P> {
     }
 
 
-    /**
+    /*
      * Public Method printPriorityQueue()
      *
      * This method is for debugging purposes, it will print out the min heap by
@@ -339,7 +339,7 @@ class PriorityQueue<E, P> {
     }
 
 
-    /**
+    /*
      * Class Node
      *
      * This object represent a node of the min Heap; as a result, the array 
@@ -359,7 +359,7 @@ class PriorityQueue<E, P> {
      * With this handle, the application can utilize the methods:
      *  - changePriority - Change a priority of a element on the priority queue
      *  - remove         - remove the element from the queue.
-     *  - isvalid        - returns true if  handle to an element is still in the queue,
+     *  - isValid        - returns true if  handle to an element is still in the queue,
      *                     or returns false if it was removed already.
      */
 

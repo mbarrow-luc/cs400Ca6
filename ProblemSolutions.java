@@ -1,7 +1,7 @@
 
-/******************************************************************
+/*
  *
- *   YOUR NAME / SECTION NUMBER
+ *   Michael Barrow / COMP 400C-001
  *
  *   This java file contains the problem solutions for the methods lastBoulder,
  *   showDuplicates, and pair methods. You should utilize the Java Collection
@@ -14,7 +14,7 @@ import java.util.PriorityQueue;
 
 public class ProblemSolutions {
 
-    /**
+    /*
      * Priority Queue (PQ) Game
      *
      * PQ1 Problem Statement:
@@ -66,13 +66,13 @@ public class ProblemSolutions {
   public static int lastBoulder(int[] boulders) {
 
       //
-      // ADD YOUR CODE HERE - DO NOT FORGET TO ADD YOUR NAME / SECTION # ABOVE
+      // TODO ADD YOUR CODE HERE - DO NOT FORGET TO ADD YOUR NAME / SECTION # ABOVE
       //
       return -1;
   }
 
 
-    /**
+    /*
      * Method showDuplicates
      *
      * This method identifies duplicate strings in an array list. The list
@@ -92,14 +92,14 @@ public class ProblemSolutions {
     public static ArrayList<String> showDuplicates(ArrayList<String> input) {
 
         //
-        //  YOUR CODE GOES HERE
+        //  TODO YOUR CODE GOES HERE
         //
         return new ArrayList<>();  // Make sure result is sorted in ascending order
 
     }
 
 
-    /**
+    /*
      * Finds pairs in the input array that add up to k.
      *
      * @param input   Array of integers
@@ -116,7 +116,7 @@ public class ProblemSolutions {
      *         - Ordering between pairs:
      *            The ordering of strings of pairs should be sorted in lowest to
      *            highest pairs. E.g., if the following two string pairs within
-     *            the returned ArraryList, "(3, 6)" and "(2, 7), they should be
+     *            the returned ArrayList, "(3, 6)" and "(2, 7), they should be
      *            ordered in the ArrayList returned as "(2, 7)" and "(3, 6 )".
      *
      *         Example output:
@@ -132,7 +132,7 @@ public class ProblemSolutions {
     public static ArrayList<String> pair(int[] input, int k) {
 
         //
-        //  YOUR CODE GOES HERE
+        //  TODO YOUR CODE GOES HERE
         //
         return new ArrayList<>();  // Make sure returned lists is sorted as indicated above
     }
