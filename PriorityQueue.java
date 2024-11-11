@@ -151,8 +151,13 @@ class PriorityQueue<E, P> {
 
     public Node add(E e, P priority) {
 
-        // TODO YOUR CODE GOES HERE
-        return null;
+        int idx = tree.size();
+        Node n = new Node(e, priority, idx);
+
+        tree.add(n);
+        this.pullUp(idx);
+
+        return n;
     }
 
 
@@ -168,7 +173,12 @@ class PriorityQueue<E, P> {
 
     public boolean contains(E e) {
 
-        // TODO ADD YOUR CODE HERE
+        for (Node n : tree) {
+            if (n.value().equals(e)) {
+                return true;
+            }
+        }
+
         return false;
     }
 
