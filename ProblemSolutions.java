@@ -159,9 +159,23 @@ public class ProblemSolutions {
 
     public static ArrayList<String> pair(int[] input, int k) {
 
-        //
-        //  TODO YOUR CODE GOES HERE
-        //
-        return new ArrayList<>();  // Make sure returned lists is sorted as indicated above
+        Set<Integer> set = new HashSet<>();
+        for (int i : input) {
+            set.add(i);
+        }
+
+        List<Integer> temp = new ArrayList<>(set);
+        ArrayList<String> output = new ArrayList<>();
+
+        for (int i = 0; i< temp.size()/2; i++) {
+            int j = temp.get(i);
+            if (temp.contains(k - j)) {
+                output.add("(" + j + ", " + (k-j) + ")");
+
+            }
+        }
+        Collections.sort(output);
+
+        return output;  // Make sure returned lists is sorted as indicated above
     }
 }
