@@ -107,10 +107,22 @@ public class ProblemSolutions {
 
     public static ArrayList<String> showDuplicates(ArrayList<String> input) {
 
-        //
-        //  TODO YOUR CODE GOES HERE
-        //
-        return new ArrayList<>();  // Make sure result is sorted in ascending order
+        Set<String> dupesSet = new HashSet<>();
+
+        for (String str : input) {
+            if (Collections.frequency(input, str) > 1) {
+                dupesSet.add(str);
+            }
+        }
+
+        Queue<String> dupesQ = new PriorityQueue<>(dupesSet);
+        ArrayList<String> dupesList = new ArrayList<>();
+
+        while (! dupesQ.isEmpty()) {
+            dupesList.add(dupesQ.poll());
+        }
+
+        return dupesList;  // Make sure result is sorted in ascending order
 
     }
 
