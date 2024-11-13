@@ -9,6 +9,7 @@
  *
  ********************************************************************/
 
+import java.lang.Math;
 import java.util.*;
 import java.util.PriorityQueue;
 
@@ -159,23 +160,29 @@ public class ProblemSolutions {
 
     public static ArrayList<String> pair(int[] input, int k) {
 
+        // remove duplicates
         Set<Integer> set = new HashSet<>();
         for (int i : input) {
             set.add(i);
         }
 
+        // transfer to indexable collection and sort
         List<Integer> temp = new ArrayList<>(set);
-        ArrayList<String> output = new ArrayList<>();
+        Collections.sort(temp);
 
-        for (int i = 0; i< temp.size()/2; i++) {
+        // find pairs (after removing duplicates and sorting, traversing past median element is unnecessary)
+        ArrayList<String> output = new ArrayList<>();
+        double halfSize = Math.ceil(temp.size()/2.0);
+        for (int i=0; i<halfSize; i++) {
             int j = temp.get(i);
-            if (temp.contains(k - j)) {
-                output.add("(" + j + ", " + (k-j) + ")");
+            int diff = k - j;
+            if (temp.contains(diff)) {
+                output.add("(" + j + ", " + diff + ")");
 
             }
         }
-        Collections.sort(output);
+        Collections.sort(output);  // ensure list is sorted
 
-        return output;  // Make sure returned lists is sorted as indicated above
+        return output;
     }
 }
